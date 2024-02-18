@@ -1,56 +1,100 @@
-# Clyell
+# jekyll-rtd-theme
 
-[https://gjuniioor.github.io/clyell](https://gjuniioor.github.io/clyell)
+![CI](https://github.com/rundocs/jekyll-rtd-theme/workflows/CI/badge.svg?branch=develop)
+![jsDelivr](https://data.jsdelivr.com/v1/package/gh/rundocs/jekyll-rtd-theme/badge)
 
-### About
+Just another documentation theme compatible with GitHub Pages
 
-It's just one more [jekyll](https://github.com/jekyll/jekyll) theme. Maybe it's has some appearance like a linux console. :)
+## What it does?
 
-[Bootstrap](http://getbootstrap.com/) was added to turn responsible. Thanks, [@magnunleno](https://github.com/magnunleno).
+This theme is inspired by [sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme) and refactored with:
 
-### Features
+- [@primer/css](https://github.com/primer/css)
+- [github-pages](https://github.com/github/pages-gem) ([dependency versions](https://pages.github.com/versions/))
 
-- [x] Google analytics
-- [x] Disqus
-- [x] Responsible
-- [x] Highlights for code
+## Quick start
 
-### Characteristics
+```yml
+remote_theme: rundocs/jekyll-rtd-theme
+```
 
-- [x] Customized (and nice :P) 404 page
-- [x] Simple
-- [x] Friendly to read
+You can [generate](https://github.com/rundocs/starter-slim/generate) with the same files and folders from [rundocs/starter-slim](https://github.com/rundocs/starter-slim/)
 
-### Screenshots
+## Usage
 
-![Screenshot]({{ site.baseurl }}images/screenshot/01.png)
+Documentation that can guide how to create with Github pages, please refer to [rundocs.io](https://rundocs.io) for details
 
-![Screenshot]({{ site.baseurl }}images/screenshot/02.png)
+## Features
 
-### Config file example
+- Shortcodes (Toasts card, mermaid)
+- Pages Plugins (emoji, gist, avatar, mentions)
+- Auto generate sidebar
+- [Attribute List Definitions](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions) (Primer/css utilities, Font Awesome 4)
+- Service worker (caches)
+- SEO (404, robots.txt, sitemap.xml)
+- Canonical Link (Open Graph, Twitter Card, Schema data)
 
-~~~ yml
-# Site settings
-title: "gjuniioor"
-bye_message: "Thx!"
-baseurl: "/clyell/"
-url: "https://gjuniioor.github.io"
-disqus: gjuniioor
+## Options
 
-# Header settings
-nick: "gjuniioor"
-mail:
-    domain: "protonmail"
-    ext: "ch"
-source_code:
-    server: "github.com"
-    nick: "gjuniioor"
-blog:
-    server: "wordpress.com"
-    nick: "gjuniioor"
-fingerprint_key: "5E12 9ABC C2A9 564B C048  2DF9 D327 0D10 BC71 CF75"
+| name          | default value        | description       |
+| ------------- | -------------------- | ----------------- |
+| `title`       | repo name            |                   |
+| `description` | repo description     |                   |
+| `url`         | user domain or cname |                   |
+| `baseurl`     | repo name            |                   |
+| `lang`        | `en`                 |                   |
+| `direction`   | `auto`               | `ltr` or `rtl`    |
+| `highlighter` | `rouge`              | Cannot be changed |
 
-# Build settings
-markdown: kramdown
-permalink: /:categories/:title/
-~~~
+```yml
+# folders sort
+readme_index:
+  with_frontmatter: true
+
+meta:
+  key1: value1
+  key2: value2
+  .
+  .
+  .
+
+google:
+  gtag:
+  adsense:
+
+mathjax: # this will prased to json, default: {}
+
+mermaid:
+  custom:     # mermaid link
+  initialize: # this will prased to json, default: {}
+
+scss:   # also _includes/extra/styles.scss
+script: # also _includes/extra/script.js
+
+translate:
+  # shortcodes
+  danger:
+  note:
+  tip:
+  warning:
+  # 404
+  not_found:
+  # copyright
+  revision:
+  # search
+  searching:
+  search:
+  search_docs:
+  search_results:
+  search_results_found: # the "#" in this translate will replaced with results size!
+  search_results_not_found:
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+```
+
+## The license
+
+The theme is available as open source under the terms of the MIT License

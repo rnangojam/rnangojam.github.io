@@ -1,23 +1,31 @@
-# Site settings
-title: "gjuniioor"
-bye_message: "Thx!"
-baseurl: "/clyell/"
-url: "https://gjuniioor.github.io"
-disqus: gjuniioor
+title: jekyll-rtd-theme
+description: Just another documentation theme compatible with GitHub Pages
 
-# Header settings
-nick: "gjuniioor"
-mail:
-    domain: "protonmail"
-    ext: "ch"
-source_code:
-    server: "github.com"
-    nick: "gjuniioor"
-blog:
-    server: "wordpress.com"
-    nick: "gjuniioor"
-fingerprint_key: "5E12 9ABC C2A9 564B C048  2DF9 D327 0D10 BC71 CF75"
+theme: null
 
-# Build settings
-markdown: kramdown
-permalink: /:categories/:title/
+# debug:
+#   compress: true
+#   dist: false
+#   shortcodes: true
+
+readme_index:
+  with_frontmatter: true
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+
+exclude:
+  - Makefile
+  - CNAME
+  - LICENSE
+  - update.sh
+  - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - jekyll-rtd-theme.gemspec
