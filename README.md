@@ -1,9 +1,9 @@
-# rnangojam.github.io
+# rnangojam.github
 
 
 한국기술교육대학교 20학번 ROS2 공부 일지입니다.
 
-## What it does?
+## 목적
 
 This theme is inspired by [sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme) and refactored with:
 
