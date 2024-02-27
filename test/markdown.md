@@ -152,11 +152,11 @@ Inline code inside table cells should still be distinguishable.
 
 Small images should be shown at their actual size.
 
-![Octocat](https://koreatechackr-my.sharepoint.com/:i:/g/personal/1324werqt_koreatech_ac_kr/EU75X-Z51BFNoknxpcPg_5gBJI4e9DuvK406FbFVOJ3UPg?e=d0e03v)
+![Octocat](https://koreatechackr-my.sharepoint.com/personal/1324werqt_koreatech_ac_kr/_layouts/15/embed.aspx?UniqueId=e65ff94e-d479-4d11-a249-f1a5c3e0ff98)
 
 Large images should always scale down and fit in the content container.
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+![Branching](https://koreatechackr-my.sharepoint.com/personal/1324werqt_koreatech_ac_kr/_layouts/15/embed.aspx?UniqueId=e65ff94e-d479-4d11-a249-f1a5c3e0ff98)
 
 ```
 This is the final element on the page and there should be no margin below this.
