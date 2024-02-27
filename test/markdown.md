@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Markdown Elements
+# ROS 2 환경 구성
 
 Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
 
@@ -10,15 +10,19 @@ There should be whitespace between paragraphs. There should be whitespace betwee
 
 There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
 
-> There should be no margin above this first sentence.
->
+ROS 2는 여러 환경에서 사용이 가능하다. 예를 들어 Ubuntu, Docker, WSL 등등이 있다. 그중에서 WSL2를 이용하여 ROS 2를 사용하기 위한 밑작업을 할 예정이다.
+
+> ㅁㄴㅇㄹ
+> 
 > Blockquotes should be a lighter gray with a gray border along the left side.
 >
 > There should be no margin below this final sentence.
 
-# Header 1
+# WSL2 설정
 
-This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+WSL은 Window Subsystem for Linux의 약자로 윈도우 환경에서 리눅스 환경을 사용할 수 있도록 해주는 기능이다. 이를 이용하여 Ubuntu 22.04를 설치할 예정이다.
+
+
 
 ## Header 2
 
@@ -148,7 +152,7 @@ Inline code inside table cells should still be distinguishable.
 
 Small images should be shown at their actual size.
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![Octocat](https://koreatechackr-my.sharepoint.com/:i:/g/personal/1324werqt_koreatech_ac_kr/EU75X-Z51BFNoknxpcPg_5gBJI4e9DuvK406FbFVOJ3UPg?e=d0e03v)
 
 Large images should always scale down and fit in the content container.
 
