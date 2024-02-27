@@ -7,8 +7,6 @@ sort: 1
 > WSL2 및 Ubuntu-20.04 설치
 
 
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
 ROS 2는 여러 환경에서 사용이 가능하다. 예를 들어 Ubuntu, Docker, WSL 등등이 있다. 그중에서 WSL2를 이용하여 ROS 2를 사용하기 위한 밑작업을 할 예정이다.
 
 
