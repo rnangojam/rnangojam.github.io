@@ -2,10 +2,8 @@
 sort: 1
 ---
 
-# Test Documentation
+# ROS2 공부 일지
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
-```
+"ROS 2로 시작하는 로봇 프로그래밍"이란 책을 따라가며 공부 할 예정입니다. 
 
-{% include list.liquid all=true %}
+개발환경은 WSL2를 이용하여 Ubuntu-22.04를 사용합니다.
