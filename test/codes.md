@@ -1,6 +1,6 @@
 ---
-sort: 
-
+sort: 3
+---
 
 # Code Blocks
 
@@ -33,4 +33,3 @@ sort:
   }
 }
 ```
----

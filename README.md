@@ -1,14 +1,13 @@
 # rnangojam.github
 
 
-한국기술교육대학교 20학번 ROS2 공부 일지입니다.
+한국기술교육대학교 20학번의 ROS2 공부 일지입니다.
 
 ## 목적
 
-This theme is inspired by [sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme) and refactored with:
+추후에 있을 졸업작품을 위한 ROS2 공부 및 프로그래밍(Python3, Ubuntu) 역량을 기르는 목적입니다.
 
-- [@primer/css](https://github.com/primer/css)
-- [github-pages](https://github.com/github/pages-gem) ([dependency versions](https://pages.github.com/versions/))
+"ROS 2로 시작하는 로봇 프로그래밍"이란 책의 예제를 따라가며 공부할 예정입니다.
 
 ## Quick start
 
