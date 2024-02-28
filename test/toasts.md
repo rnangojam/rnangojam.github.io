@@ -82,4 +82,21 @@ ros2 run turtlesim turtle_teleop_key
 ```
 turtle_teleop_key를 실행시킨 터미널을 클릭하고 키보드로 움직여보면 잘 움직이는 것을 볼 수 있다.
 
+다음의 코드를 통해 현재 실행중인 노드, 토픽(Topic), 서비스(Service), 액션(Action)을 알 수 있다. 이 코드는 새로운 터미널을 열어 입력하면 된다.
+
+```s
+ros2 node list
+ros2 topic list
+ros2 service list
+ros2 action list
+```
+
+실행중인 노드를 GUI로 보는 방법이 있다. 아래 코드로 rqt를 설치 후 실행시켜 그래프로 보자.
+
+```s
+sudo apt update                             # Ubuntu update
+sudo apt install ~nros-foxy-rqt*            # rqt 설치
+rqt_graph                                   # rqt 실행
+```
+
 
