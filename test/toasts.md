@@ -37,5 +37,49 @@ Turtlesim 패키지의 노드를 확인해 보자
 ros2 pkg excutables turtlesim
 ```
 
+**Turtlesim Package의 Node 실행**
+
+정상적인 ROS2 패키지라면 turtlesim draw_square, turtlesim mimic, turtlesim turtle_teleop_key, turtlesim turtlesim_node 4개의 노드가 출력될 것이다.
+
+여기서 많이 쓰는 노드는 turtlesim turtle_teleop_key, turtlesim turtlesim_node이며 직접 실행시키는 방법은 다음의 코드이다.
+
+```s
+ros2 run turtlesim turtlesim_node   
+ros2 run turtlesim turtle_teleop_key
+```
+
+WSL2 사용자의 경우 위의 코드를 실행시키면 DISPLAY error가 뜰 것이다. 그 이유는 노드를 실행시키면 GUI가 실행되는데 그 GUI를 띄울 DISPLAY를 설정해주지 않아서 이다. 
+
+위의 경우 [X11](https://sourceforge.net/projects/xming/)을 설치하면 해결이 된다. 
+
+설치 후 XLaunch를 실행시켜 DISPLAY number를 0으로 지정한 후 다음
+
+Start no client 후 다음
+
+그냥 다음을 눌러 넘어가도 된다. 2번째 항목을 선택하였으면 후에 터미널에 코드를 한개 더 작성해야 한다.
+
+마침을 누른 후 Windows키 + R로  실행창을 연 후 cmd를 입력해 cmd 터미널을 실행시킨다.
+
+다음의 코드를 입력한다.
+
+```s
+ipconfig                           # 연결된 IP를 보여준다. 
+```
+우리가 관심있는 IP는 **이더넷 어댑터 vEthernet (WSL (Hyper-V firewall))**부분의 IP이다.
+
+IPv4 주소를 복사 후 Ubuntu 터미널로 돌아와 다음의 코드를 입력한다.
+
+```s
+export DISPLAY='IP주소':0.0
+export LIBGL_ALWAYS_INDIRECT=1     # 2번째 항목 선택 시 입력
+```
+
+그 후 다음의 코드를 실행시켜 노드를 실행시키자. 한 코드를 작성시키면 그 터미널에는 코드가 더이상 작성이 안되므로 터미널을 한개 더 열어 코드를 입력할 것.
+
+```s
+ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+```
+turtle_teleop_key를 실행시킨 터미널을 클릭하고 키보드로 움직여보면 잘 움직이는 것을 볼 수 있다.
 
 
