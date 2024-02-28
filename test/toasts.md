@@ -2,9 +2,9 @@
 sort: 2
 ---
 
-# Turtlesim Package - Node, Topic, Service, Action
+# Turtlesim Package - Node
 
-> Turtlesim Package를 통해 Node, Topic, Service, Action을 공부
+> Turtlesim Package를 통해 Node를 공부
 
 ROS 2는 사용자들에게 Node, Topic, Service, Action를 손쉽게 알려주기 위한 튜토리얼과 같은 개념으로 Turtlesim이란 Package를 개발하였다. 
 
@@ -99,4 +99,16 @@ sudo apt install ~nros-foxy-rqt*            # rqt 설치
 rqt_graph                                   # rqt 실행
 ```
 
+현재 작동중인 노드는 총 3개이다. turtlesim, teleop_turtle, rqt_gui_py_node_4204 노드인데, 위에서 언급한 ros2 node list를 통해 알 수 있다. 여기서 rqt는 다양한 툴을 복수로 실행하기 위해 노드 뒤에 프로세스 아이디가 붙는 것을 명심하자. 따라서 아이디가 달라질 수 있다.
 
+만일 동일한 노드를 여러개 실행시키고 싶다면 새로운 터미널에 동일한 코드를 입력하면 된다. 하지만 이는 동일한 노드 이름으로 실행되어 시스템을 구성하는 데 별로 좋은 방법이 아니다. 다음의 코드를 통해 노드명을 변경할 수 있다.
+
+```s
+ros2 run turtlesim turtlesim_node __node:=new_turtle     # new_turtle이란 노드 생성
+```
+그리고 rqt_graph창의 좌측 상단의 새로고침을 누르면 노드가 한개 더 나타날 것이다. 방금 설정한 노드이다.
+
+노드의 정보를 확인하려면 다음의 명령어를 사용하면 된다.
+```s
+ros2 node info '/노드명'
+```
