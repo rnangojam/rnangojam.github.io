@@ -10,6 +10,18 @@ sort: 3
 
 다음의 코드를 통해 토픽의 정보를 알 수 있다.
 ```s
-ros2 node info
+ros2 node info 'node name'        # 현재 노드의 토픽을 확인
+ros2 topic list -t                # 현재 동작중인 모든 노드의 토픽을 확인
+```
+토픽의 관계를 rqt를 통해 visualize할 수 있다. 이를 통해 토픽의 퍼블리시와 서브스크라이브 상태를 확인할 수 있다.
+
+```s
+rqt_graph
+```
+
+다음의 코드로 해당 토픽의 정보를 확인할 수 있다.
+
+```s
+ros2 topic info 'topic name'       # 토픽의 퍼블리셔 및 서브스크라이버 정보 확인
 ```
 
