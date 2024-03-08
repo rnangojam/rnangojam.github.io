@@ -25,3 +25,30 @@ rqt_graph
 ros2 topic info 'topic name'       # 토픽의 퍼블리셔 및 서브스크라이버 정보 확인
 ```
 
+토픽 간 메시지의 대역폭은 다음과 같다.
+
+```s
+ros2 topic bw 'topic name'         # 토픽의 초당 대역폭
+```
+
+전송 주기와 지연시간은 다음과 같다.
+
+```s
+ros2 topic hz 'topic name'         # 토픽의 전송 주기
+ros2 topic delay 'topic name'      # 토픽의 지연시간
+```
+
+토픽을 퍼블리시하여 터틀심의 거북이를 마음대로 조종할 수 있다.
+
+```s
+ros2 topic pub <topic name> <msg type> "<args>"
+```
+
+다음 코드로 거북이를 움직여 보자
+
+```s
+ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
+```
+
+거북이가 원 궤적으로 움직이는 것을 볼 수 있다. 여기서 --once 대신 --rate 1을 사용하면 1Hz주기가 되어 계속해서 원 궤적을 그리며 회전하는 것을 알 수있다.
+
