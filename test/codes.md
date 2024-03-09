@@ -52,3 +52,13 @@ ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0
 
 거북이가 원 궤적으로 움직이는 것을 볼 수 있다. 여기서 --once 대신 --rate 1을 사용하면 1Hz주기가 되어 계속해서 원 궤적을 그리며 회전하는 것을 알 수있다.
 
+이러한 토픽을 파일 형태로 저장하여 불러올 수 있는 기능이 있다. 바로 bag 기록인데 이를 이용하여 알고리즘을 개선하거나 분석할 수 있다.
+
+```s
+ros2 bag record <topic name1> <topic name2> <topic name3>
+ros2 bag info "rosbag 파일 이름"        # bag 정보
+ros2 bag play "rosbag 파일 이름"        # bag 재생
+```
+
+Ctrl + C로 녹화 종료를 할 수 있다.
+
