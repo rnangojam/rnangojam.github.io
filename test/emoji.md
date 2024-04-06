@@ -2,14 +2,32 @@
 sort: 5
 ---
 
-# Emoji Test
+# # Turtlesim Package - Action
 
-```
-I give this theme two :+1:!
+> Turtlesim Package를 통해 Action를 공부
+
+액션(Action)은 앞서 언급한 Topic과 Service가 섞여있다고 생각하면 된다. 동기 / 비동기식 양방향 메시지 송수신으로 액션 목표를 지정하는 액션 클라이언트와 액션 목표를 받아 일(Task)을 수행하면서 중간 결괏값을 전송하는 액션 피드백(Feedback) 그리고 최종 결괏값을 담은 액션 결과(Result)를 전송하는 액션 서버(Action Server)간 통신이다.
+
+액션은 목표 전달(send_goal), 목표 취소(cancel_goal), 결과 받기(get_result) 서비스를 사용하여 동기 / 비동기 방식이 혼합되었다. 처음 액션 목표를 목표 전달 서비스로 노드 간 통신 후 동작을 수행하며 수행하는 노드에서 다른 노드로 피드백 Topic을 보낸다. 그 후 목표에 달성하면 결과 받기 서비스를 사용하고 마지막으로 목표 취소 서비스를 사용하여 액션이 동작하게 된다.
+
+다음 코드를 사용하여 액션을 사용해보자.
+```s
+ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key   #다른 터미널에서 입력
 ```
 
-I give this theme two :+1:!
+turtle_teleop_key가 실행된 터미널을 클릭한 뒤 키보드로 거북이를 조종해보자. 화살표로 거북이를 상하좌우로 움직일 수 있고 G, B, V, C, D, E, R, T를 눌러 거북이의 각도를 변경할 수 있다. 각 키에 할당된 각도는 절대 각도로, 이미 파일에 목표 각도 값이 할당되어 거북이가 어떤 각에 있던 내가 목표 각도로 설정하여 각도를 변경할 수 있는 것이다. 
 
-```tip
-Set config `plugins: [jemoji]`, Emoji searcher, see: [https://emoji.muan.co/](https://emoji.muan.co/)
+예를 들어 R키를 누르면 1.5708rad이란 값이 액션 목표가 되어 거북이가 회전하는 것이다.
+
+F키는 동작을 바로 멈추게 하는 키로 목표 취소 서비스를 전달하여 즉시 거북이의 행동을 멈추게 한다.
+
+거북이를 회전시켜 목표하고자 하는 각에 위치시켰다면 목표가 성공적으로 달성되었다는 문구와 함께 터미널 창에 표시될 것이다. 이것은 결과 받기 서비스로 생각할 수 있다.
+
+만약 거북이가 다 움직이기 전에 다른 키를 눌러 다른 움직임을 준다면 터미널 창에 목표가 취소되었다는 문구가 뜰 것이다. 
+
+실행된 노드의 정보를 알고 싶다면 다음의 코드를 입력할 수 있다.
+```s
+ros2 node info /nodename   
 ```
+
